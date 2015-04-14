@@ -788,4 +788,8 @@ public final class NS {
 	public static final class LICENSE {
 		public static final String PUBLIC_DOMAIN_MARK = "http://creativecommons.org/publicdomain/mark/1.0/";
 	}
+        
+        public static final class EBUCORE {
+                public static final String BASE = "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#";
+        }
 }

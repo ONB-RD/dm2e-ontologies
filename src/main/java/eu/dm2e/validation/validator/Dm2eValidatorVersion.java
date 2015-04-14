@@ -18,6 +18,7 @@ public enum Dm2eValidatorVersion {
 	V_1_1_FINAL(Dm2eValidator_1_1_Rev_Final.class),
 	V_1_2_RC1(Dm2eValidator_1_2_RC1.class),
 	V_1_2_RC2(Dm2eValidator_1_2_RC2.class),
+        V_1_2_RC2_SOUNDS(Dm2eValidator_1_2_RC2_SOUNDS.class),
 	;
 	
 	public static Dm2eValidatorVersion forString(String versionStr) throws NoSuchFieldException 
