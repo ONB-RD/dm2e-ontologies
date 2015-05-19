@@ -33,9 +33,9 @@
         <xsl:param name="oaiIdentifier" select="''" />
         <xsl:choose>
             <xsl:when test="not(contains($text, $separator))">
-                <xsl:attribute name="oaiIdentifier">
+<!--                <xsl:attribute name="oaiIdentifier">
                     <xsl:value-of select="concat($oaiIdentifier, concat(':', $text))"/>
-                </xsl:attribute>
+                </xsl:attribute>-->
             </xsl:when>
             <xsl:otherwise>
                 <xsl:call-template name="dm2e_identify">
@@ -127,6 +127,7 @@
                         <xsl:with-param name="text" select="@rdf:about" />
                     </xsl:call-template>
                     <xsl:apply-templates select="*" />
+                    <ebucore:hasGenre rdf:resource="http://data.europeana.eu/concept/soundgenres/Music"/>
                 </xsl:when>
                 <xsl:when test="name() = 'skos:Concept'">
                     <xsl:apply-templates select="skos:prefLabel"/>

@@ -100,7 +100,7 @@ public class Dm2e2Edm implements Runnable {
 
 	private static final Resource[] prettyTypes = {
 		edmModel.createResource(NS.ORE.CLASS_AGGREGATION),
-		edmModel.createResource(NS.EDM.CLASS_AGENT),
+//		edmModel.createResource(NS.EDM.CLASS_AGENT),
 		edmModel.createResource(NS.EDM.CLASS_EVENT),
 		edmModel.createResource(NS.EDM.CLASS_PLACE),
 		edmModel.createResource(NS.EDM.CLASS_PROVIDED_CHO),
@@ -118,6 +118,7 @@ public class Dm2e2Edm implements Runnable {
 		nsPrefixes.put("dm2e", NS.DM2E_UNVERSIONED.BASE);
 		nsPrefixes.put("rdaGr2", NS.RDA_GR2.BASE);
 		nsPrefixes.put("vocab-status", NS.VOCAB_STATUS.BASE);
+                nsPrefixes.put("ebucore", NS.EBUCORE.BASE);
 
 		System.setProperty("http.maxConnections", String.valueOf(100));
 		
@@ -592,7 +593,8 @@ public class Dm2e2Edm implements Runnable {
 				if (o.isResource())
 					sameAsSet.add(o.asResource());
 			}
-			String[] arr = { "gnd", "viaf" };
+//			String[] arr = { "gnd", "viaf" };
+                        String[] arr = { "viaf" };
 			SAME_AS_LOOP:
 			for (String krz : arr) {
 				for (Resource sameAsRes : sameAsSet) {
