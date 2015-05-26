@@ -100,7 +100,7 @@ public class Dm2e2Edm implements Runnable {
 
 	private static final Resource[] prettyTypes = {
 		edmModel.createResource(NS.ORE.CLASS_AGGREGATION),
-//		edmModel.createResource(NS.EDM.CLASS_AGENT),
+		edmModel.createResource(NS.EDM.CLASS_AGENT),
 		edmModel.createResource(NS.EDM.CLASS_EVENT),
 		edmModel.createResource(NS.EDM.CLASS_PLACE),
 		edmModel.createResource(NS.EDM.CLASS_PROVIDED_CHO),
