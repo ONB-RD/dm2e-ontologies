@@ -337,9 +337,9 @@ public class Dm2e2Edm implements Runnable {
 			//
 			// edm:ProvidedCHO
 			//
-			if (targetType.getURI().equals(NS.EDM.CLASS_PROVIDED_CHO)) {
-				outputModel.add(res, res(NS.DC.PROP_SOURCE), res);
-			}
+//			if (targetType.getURI().equals(NS.EDM.CLASS_PROVIDED_CHO)) {
+//				outputModel.add(res, res(NS.DC.PROP_SOURCE), res);
+//			}
 			
 			//
 			// Walk the statements
@@ -448,7 +448,7 @@ public class Dm2e2Edm implements Runnable {
 			// HACK
 			// Hard-code edm:provider to DM2E (Some providers didn't specify a skos:prefLabel here)
 			//
-			outputModel.add(targetSubject, targetProp, "DM2E");
+			outputModel.add(targetSubject, targetProp, "Europeana Sounds");
 			skipSet.add(targetObject.asResource());
 			skipGeneric = true;
 		} else if (origProp.getURI().equals(NS.DM2E_UNVERSIONED.PROP_HOLDING_INSTITUTION)) {
