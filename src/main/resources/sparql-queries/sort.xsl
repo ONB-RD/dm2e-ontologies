@@ -127,7 +127,7 @@
                         <xsl:with-param name="text" select="@rdf:about" />
                     </xsl:call-template>
                     <xsl:apply-templates select="*" />
-                    <ebucore:hasGenre rdf:resource="http://data.europeana.eu/concept/soundgenres/Music"/>
+                    <ebucore:hasGenre rdf:resource="http://data.europeana.eu/concept/soundgenres/Music/Western_classical_music"/>
                 </xsl:when>
                 <xsl:when test="name() = 'skos:Concept'">
                     <xsl:apply-templates select="skos:prefLabel"/>
